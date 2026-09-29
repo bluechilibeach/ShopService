@@ -1,6 +1,6 @@
 package org.example;
 
-public record product(
+public record Product(
         String id,
         String name
 ) {

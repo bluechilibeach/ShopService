@@ -12,6 +12,10 @@ public class OrderListRepo {
         this.orderList = orderList;
     }
 
+    public OrderListRepo() {
+
+    }
+
     public List<Order> getOrderList() {
         return orderList;
     }
@@ -53,13 +57,13 @@ public class OrderListRepo {
         return null;
     }
 
-    public void addOrder(Order order){
+    public void addOrder(Order order) {
         orderList.add(order);
     }
 
-    public void deleteOrderById(String id){
+    public void deleteOrderById(String id) {
         for (int i = 0; i < orderList.size(); i++) {
-            if (id.equals(orderList.get(i).id())){
+            if (id.equals(orderList.get(i).id())) {
                 orderList.remove(i);
                 System.out.println("Order " + id + " has been deleted.");
                 break;

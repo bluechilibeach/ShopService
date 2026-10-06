@@ -14,7 +14,6 @@ public class ProductRepo {
     }
 
     public ProductRepo() {
-        this.productList = productList;
     }
 
     public List<Product> getProductList() {
@@ -64,14 +63,17 @@ public class ProductRepo {
     }
 
     public void deleteProductById(String id) {
+        boolean productFound = false;
         for (int i = 0; i < productList.size(); i++) {
             if (id.equals(productList.get(i).id())) {
                 productList.remove(i);
                 System.out.println("Product " + id + " has been deleted.");
+                productFound = true;
                 break;
-                // add product id not found
             }
         }
-        System.out.println("Product " + id + " has not been found.");
+        if (!productFound) {
+            System.out.println("Product " + id + " has not been found.");
+        }
     }
 }

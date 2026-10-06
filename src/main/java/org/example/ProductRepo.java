@@ -69,7 +69,9 @@ public class ProductRepo {
                 productList.remove(i);
                 System.out.println("Product " + id + " has been deleted.");
                 break;
+                // add product id not found
             }
         }
+        System.out.println("Product " + id + " has not been found.");
     }
 }

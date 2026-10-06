@@ -10,6 +10,7 @@ public class Main {
         ProductRepo productRepo = new ProductRepo();
         OrderListRepo orderListRepo = new OrderListRepo();
         ShopService shopService = new ShopService(productRepo, orderListRepo);
+        OrderRepo orderRepo = new OrderMapRepo();
 
         System.out.println(productRepo.listAllProducts());
         productRepo.addProduct(new Product("123", "Apple"));

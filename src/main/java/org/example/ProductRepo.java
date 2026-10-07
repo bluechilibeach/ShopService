@@ -1,6 +1,5 @@
 package org.example;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -44,11 +43,11 @@ public class ProductRepo {
     }
 
 
-    public List<Product> listAllProducts() {
+    public List<Product> getAllProducts() {
         return productList;
     }
 
-    public Product listProductById(String id) {
+    public Product getProductById(String id) {
         for (int i = 0; i < productList.size(); i++) {
             if (id.equals(productList.get(i).id())) {
                 return productList.get(i);

@@ -43,11 +43,11 @@ public class OrderListRepo implements OrderRepo {
                 '}';
     }
 
-    public List<Order> listAllOrders() {
+    public List<Order> getAllOrders() {
         return orderList;
     }
 
-    public Order listOrdersById(String id) {
+    public Order getOrdersById(String id) {
         for (int i = 0; i < orderList.size(); i++) {
             if (id.equals(orderList.get(i).id())) {
                 return orderList.get(i);
@@ -56,6 +56,7 @@ public class OrderListRepo implements OrderRepo {
         System.out.println("The order with id " + id + " was not found.");
         return null;
     }
+
 
     public void addOrder(Order order) {
         orderList.add(order);

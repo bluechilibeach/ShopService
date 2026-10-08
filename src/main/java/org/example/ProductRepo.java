@@ -3,6 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 public class ProductRepo {
     private List<Product> productList = new ArrayList<>();
@@ -47,7 +48,9 @@ public class ProductRepo {
         return productList;
     }
 
-    public Product getProductById(String id) {
+
+
+    /*public Product getProductById(String id) {
         for (int i = 0; i < productList.size(); i++) {
             if (id.equals(productList.get(i).id())) {
                 return productList.get(i);
@@ -55,7 +58,18 @@ public class ProductRepo {
         }
         System.out.println("The product with id " + id + " was not found.");
         return null;
+    }*/
+
+    public Optional<Product> getProductById(String id) {
+        for (Product product : productList) {
+            if (id.equals(product.id())) {
+                return Optional.of(product);
+            }
+        }
+
+        return Optional.empty();
     }
+
 
     public void addProduct(Product product) {
         productList.add(product);

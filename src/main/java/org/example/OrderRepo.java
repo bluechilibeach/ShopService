@@ -8,7 +8,7 @@ public interface OrderRepo {
 
     void deleteOrderById(String id);
 
-    Order listOrdersById(String id);
+    Order getOrdersById(String id);
 
-    List<Order> listAllOrders();
+    List<Order> getAllOrders();
 }

@@ -5,7 +5,8 @@ import java.util.List;
 
 public record Order(
         String id,
-        List<OrderItem> orderItems
+        List<OrderItem> orderItems,
+        OrderStatus orderStatus
 ) {
     public BigDecimal getTotalPrice() {
         BigDecimal total = BigDecimal.ZERO;

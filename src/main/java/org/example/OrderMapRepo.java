@@ -21,7 +21,7 @@ public class OrderMapRepo implements OrderRepo {
     }
 
     @Override
-    public Order listOrdersById(String id) {
+    public Order getOrdersById(String id) {
         Order order = orderMap.get(id);
 
         if (order == null) {
@@ -31,7 +31,7 @@ public class OrderMapRepo implements OrderRepo {
     }
 
     @Override
-    public List<Order> listAllOrders() {
+    public List<Order> getAllOrders() {
         return new ArrayList<>(orderMap.values());
     }
 }

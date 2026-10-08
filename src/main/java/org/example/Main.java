@@ -2,7 +2,6 @@ package org.example;
 
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -25,7 +24,7 @@ public class Main {
         //System.out.println(productRepo.listProductById("788"));
 
 
-        System.out.println(orderListRepo.listAllOrders());
+        System.out.println(orderListRepo.getAllOrders());
 
         /*
         shopService.placeOrder("78541", List.of("123", "456")); or
@@ -38,7 +37,12 @@ public class Main {
         );
 
         shopService.placeOrder("78541", productsForOrder78541);
-        System.out.println(orderListRepo.listOrdersById("78541"));
+        System.out.println(orderListRepo.getOrdersById("78541"));
+
+        System.out.println(shopService.getOrdersByStatus(OrderStatus.PROCESSING));
+
+        System.out.println(productRepo.getProductById("123"));
+        System.out.println(productRepo.getProductById("999"));
 
 
     }
